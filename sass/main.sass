@@ -1,0 +1,308 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+	font-size: 16px
+
+body	
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	margin: 0
+	color: #fff
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+a
+	text-decoration: none
+	&:link
+		color: #fff
+	&:visited
+		color: #fff
+	&:hover
+		color: #fff
+		text-decoration: none
+	&:active
+		color: #fff
+		border-bottom: none
+
+section
+	padding: 100px 0
+	background-size: cover
+	background-position: 50% 50%
+
+.main-bg
+	width: 100%
+	height: 100vh
+	background-size: cover
+	background-position: 50% 50%
+	position: relative
+	&:before
+		position: absolute
+		top: 0
+		left: 0
+		content: ''
+		background-color: rgba(0,0,0, .3)
+		width: 100%
+		height: 100%
+
+.main-head
+	background-color: rgba(0,0,0, .3)
+	.row
+		height: 70px
+	&__center
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+	&__title
+		text-shadow: 0 1px 0 #3d3029
+		color: #ffffff
+		font-family: Playfair, sans-serif
+		font-size: 92px
+		font-weight: 700
+		line-height: 24px
+		letter-spacing: 6.9px
+		text-align: center
+	&__line
+	&__description
+		font-family: ProximaNova
+		font-size: 20px
+		line-height: 36px
+		letter-spacing: 2.4px
+		text-align: center
+		max-width: 540px
+	&__btn
+		width: 200px
+		display: flex
+		justify-content: center
+		margin-top: 70px
+
+.logo
+	position: absolute
+	top: -35px
+	font-family: Scriptina, sans-serif
+	font-size: 30px
+	margin: 0
+
+.social
+		display: flex
+		justify-content: space-around
+
+.menu
+	display: flex
+	a 
+		text-transform: uppercase
+		font-family: Alegreya
+		font-size: 17px
+
+.top-menu
+	justify-content: space-around
+	span 
+		padding-top: 4px
+
+.hidden-wrap
+	display: none
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background-color: rgba(0,0,0, .8)
+	.hidden-menu
+		width: 100%
+		height: 100%
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		z-index: 100
+		a 
+			margin: 5px 0
+
+.hamburger
+	position: fixed
+	top: 0
+	right: 0
+	z-index: 101
+	background-color: rgba(255, 255, 255, .3)
+	padding-bottom: 7px
+	padding: 
+
+.btn
+	font-family: Alegreya
+	font-size: 14px
+	text-transform: uppercase
+
+.btn_menu
+	padding: 10px 25px
+	background-color: rgba(0,0,0, .3)
+	border: 1px dashed #fff
+	letter-spacing: 4.2px
+
+.s-art
+	color: $text
+	position: relative
+	&__top-img
+		position: absolute
+		top: -54px
+		left: 50%
+		margin-left: -53px
+	&__big, &__small
+		position: absolute
+	&__small
+		top: 20px
+		left: 18px
+		background-color: #fff
+		border-radius: 50%
+		border: 10px solid #fff
+	&:before
+		position: absolute
+		top: 0
+		left: 0
+		content: ''
+		background-color: #fff
+		width: 100%
+		height: 10px
+
+.top-title
+	font-family: Alegreya
+	text-align: center
+	&__big, &__small
+		margin: 0
+	&__big
+		font-size: 48px
+		letter-spacing: 1.2px
+	&__small
+		font-size: 14px
+		line-height: 30px
+		text-transform: uppercase
+		color: $accent
+
+.chef
+	text-align: center
+	p 
+		font-size: 14px
+	&__title
+		font-family: Alegreya
+		font-size: 24px
+	&__info
+		font-family: Alegreya
+		font-size: 24px
+		letter-spacing: 0.6px
+		font-family: Alegreya
+		display: flex
+		justify-content: center
+		align-items: center
+	&__name, &__surname
+		border-top: 1px solid #d7d5ca
+		border-bottom: 1px solid #d7d5ca
+		padding: 10px 0
+	&__inner
+		margin: 0 20px
+	&__img
+		border-radius: 50%
+		margin: 0 20px
+	&__quote
+		margin-top: 40px
+		font-family: Scriptina
+		font-size: 24px
+		color: $accent
+		position: relative
+		&:before, &:after
+			position: absolute
+			color: $text
+			font-family: Times New Roman	
+			font-size: 60px
+			opacity: .5
+			line-height: 1
+		&:before		
+			top: -20px
+			left: 0
+			content: '“'		
+		&:after
+			right: 0
+			bottom: -60px
+			content: "”"
+
+.tastes
+	&__img
+		margin-top: 30px
+	&__wrap
+		position: relative
+		height: auto
+		&:after
+			position: absolute
+			top: 3%
+			left: 3%
+			content: ''
+			background-color: transparent
+			border: 5px solid #fff
+			width: 94%
+			height: 94%
+
+.figure-wave
+	position: absolute
+	bottom: -175px
+	right: -155px
+	z-index: 100
+	&__img
+		opacity: .9
+	&__text
+		color: $accent
+		font-family: Alegreya
+		font-size: 30px
+		line-height: 36px
+		text-transform: uppercase
+		z-index: 10
+		position: absolute
+		top: 50%
+		left: 50%
+		margin-left: -70px
+		margin-top: -45px
+		width: 156px
+		height: 58px
+		text-align: center
+
+
+
+
+@import "media" // Всегда в конце
